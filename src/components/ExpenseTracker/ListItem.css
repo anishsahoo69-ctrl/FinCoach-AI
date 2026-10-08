@@ -1,0 +1,156 @@
+.list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+  box-sizing: border-box;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.list-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.list-item-category-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #eef2ff;
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item-details {
+  min-width: 0;
+}
+
+.list-item-details h3 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.meta-dot {
+  color: #94a3b8;
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.list-item-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.list-item-amount {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.list-item-delete {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.list-item-delete:hover {
+  background: #fee2e2;
+  transform: translateY(-1px);
+}
+
+.list-item-delete:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .list-item {
+    gap: 10px;
+  }
+
+  .list-item-category-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .list-item-details h3 {
+    max-width: 150px;
+  }
+
+  .list-item-right {
+    gap: 8px;
+  }
+
+  .list-item-amount {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 450px) {
+  .list-item-category-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .list-item-details h3 {
+    max-width: 110px;
+  }
+
+  .list-item-meta {
+    font-size: 11px;
+  }
+
+  .list-item-amount {
+    font-size: 12px;
+  }
+
+  .list-item-delete {
+    width: 30px;
+    height: 30px;
+  }
+}

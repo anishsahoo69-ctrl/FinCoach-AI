@@ -1,0 +1,325 @@
+/* =========================================
+   FINCOACH AI - EXPENSE INPUT
+   ========================================= */
+
+.expense-input-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.expense-input-header {
+  margin-bottom: 24px;
+}
+
+.expense-input-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.expense-input-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: #eef2ff;
+  color: #6663e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expense-input-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.expense-input-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================
+   FORM GRID
+   ========================================= */
+
+.expense-input-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   FORM GROUP
+   ========================================= */
+
+.expense-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-form-group label {
+  margin-bottom: 9px;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.expense-form-group input,
+.expense-form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  box-sizing: border-box;
+
+  border: 1px solid #dbe3ef;
+  border-radius: 11px;
+
+  background: #f8fafc;
+  color: #1e293b;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.expense-form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.expense-form-group input:focus,
+.expense-form-group select:focus {
+  background: #ffffff;
+  border-color: #6663e6;
+  box-shadow: 0 0 0 3px rgba(102, 99, 230, 0.12);
+}
+
+.expense-form-group input:disabled,
+.expense-form-group select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   SELECT
+   ========================================= */
+
+.expense-select-wrapper {
+  position: relative;
+}
+
+.expense-form-group select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 35px;
+}
+
+.expense-select-wrapper::after {
+  content: "⌄";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-55%);
+  color: #64748b;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+/* =========================================
+   AMOUNT INPUT
+   ========================================= */
+
+.expense-amount-wrapper {
+  position: relative;
+}
+
+.expense-amount-wrapper input {
+  padding-left: 40px;
+}
+
+.expense-currency {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+
+  color: #64748b;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.add-expense-button {
+  min-width: 170px;
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #6663e6;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 12px rgba(102, 99, 230, 0.22);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-expense-button:hover:not(:disabled) {
+  background: #5754d6;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(102, 99, 230, 0.28);
+}
+
+.add-expense-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.add-expense-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================
+   MESSAGES
+   ========================================= */
+
+.expense-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 12px 14px;
+  margin-bottom: 20px;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.expense-message.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.expense-message.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .expense-input-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expense-form-group:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .expense-input-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .expense-input-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .expense-form-group:last-child {
+    grid-column: span 1;
+  }
+
+  .add-expense-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+  .expense-input-card {
+    padding: 16px;
+  }
+
+  .expense-input-title-wrapper {
+    gap: 10px;
+  }
+
+  .expense-input-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .expense-input-header h2 {
+    font-size: 17px;
+  }
+
+  .expense-input-header p {
+    font-size: 12px;
+  }
+
+  .expense-form-group input,
+  .expense-form-group select {
+    height: 45px;
+    font-size: 13px;
+  }
+}

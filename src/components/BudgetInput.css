@@ -1,0 +1,226 @@
+/* ================================
+   BUDGET INPUT CARD
+================================ */
+
+.budget-input-card {
+  width: 100%;
+  max-width: 600px;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.budget-input-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.budget-input-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+  color: #6366f1;
+}
+
+.budget-input-header h3 {
+  margin-bottom: 5px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.budget-input-header p {
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #64748b;
+}
+
+/* ================================
+   INPUT
+================================ */
+
+.budget-input-wrapper {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 14px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  transition: all 0.2s ease;
+}
+
+.budget-input-wrapper:focus-within {
+  border-color: #6366f1;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.budget-currency {
+  padding: 0 14px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #475569;
+
+  border-right: 1px solid #e2e8f0;
+}
+
+.budget-input-wrapper input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.budget-input-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+/* Remove number input arrows */
+
+.budget-input-wrapper input::-webkit-outer-spin-button,
+.budget-input-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.budget-input-wrapper input[type="number"] {
+  appearance: textfield;
+}
+
+/* ================================
+   BUTTON
+================================ */
+
+.set-budget-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.set-budget-button:hover {
+  background: #4f46e5;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 12px rgba(99, 102, 241, 0.2);
+}
+
+.set-budget-button:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   SUCCESS MESSAGE
+================================ */
+
+.budget-saved-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 14px;
+  padding: 11px 13px;
+
+  border: 1px solid #a7f3d0;
+  border-radius: 9px;
+
+  background: #ecfdf5;
+  color: #047857;
+
+  font-size: 13px;
+}
+
+.budget-saved-message svg {
+  flex-shrink: 0;
+}
+
+.budget-saved-message strong {
+  font-weight: 700;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .budget-input-card {
+    padding: 20px;
+  }
+
+  .budget-input-header {
+    align-items: flex-start;
+  }
+
+  .budget-input-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .budget-input-header h3 {
+    font-size: 16px;
+  }
+
+  .budget-input-header p {
+    font-size: 12px;
+  }
+}

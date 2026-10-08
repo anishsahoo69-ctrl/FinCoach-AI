@@ -1,0 +1,166 @@
+/* =========================================
+   FINCOACH AI - BUDGET WARNING
+   ========================================= */
+
+.budget-warning {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* =========================================
+   WARNING ICON
+   ========================================= */
+
+.budget-warning-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.budget-warning-content {
+  flex: 1;
+}
+
+.budget-warning-content h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.budget-warning-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.budget-warning-content strong {
+  font-weight: 700;
+}
+
+/* =========================================
+   DANGER - 90%+
+   ========================================= */
+
+.budget-warning.danger {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.budget-warning.danger .budget-warning-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* =========================================
+   WARNING - 70%+
+   ========================================= */
+
+.budget-warning.warning {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #b45309;
+}
+
+.budget-warning.warning .budget-warning-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* =========================================
+   HOVER EFFECT
+   ========================================= */
+
+.budget-warning:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 700px) {
+  .budget-warning {
+    padding: 14px 16px;
+  }
+
+  .budget-warning-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .budget-warning-content h3 {
+    font-size: 14px;
+  }
+
+  .budget-warning-content p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+  .budget-warning {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .budget-warning-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 10px;
+  }
+
+  .budget-warning-content h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .budget-warning-content p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 360px) {
+  .budget-warning {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .budget-warning-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
+  .budget-warning-content p {
+    font-size: 11px;
+  }
+}

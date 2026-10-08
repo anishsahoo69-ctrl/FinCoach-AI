@@ -1,0 +1,125 @@
+/* =========================
+   FINCOACH AI LOGO
+========================= */
+
+.fincoach-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+/* Logo Image */
+
+.fincoach-logo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   LOGO SIZES
+========================= */
+
+/* Small - Navbar / Sidebar */
+
+.fincoach-logo-small {
+  width: 150px;
+}
+
+.fincoach-logo-small .fincoach-logo-image {
+  max-height: 65px;
+}
+
+/* Medium - Login / Signup */
+
+.fincoach-logo-medium {
+  width: 220px;
+}
+
+.fincoach-logo-medium .fincoach-logo-image {
+  max-height: 110px;
+}
+
+/* Large - Landing Page */
+
+.fincoach-logo-large {
+  width: 320px;
+}
+
+.fincoach-logo-large .fincoach-logo-image {
+  max-height: 180px;
+}
+
+/* Extra Large */
+
+.fincoach-logo-xl {
+  width: 430px;
+}
+
+.fincoach-logo-xl .fincoach-logo-image {
+  max-height: 240px;
+}
+
+/* =========================
+   TAGLINE
+========================= */
+
+.fincoach-logo-tagline {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/* =========================
+   CLICKABLE LOGO
+========================= */
+
+.fincoach-logo[role="button"] {
+  cursor: pointer;
+}
+
+.fincoach-logo[role="button"]:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .fincoach-logo-large {
+    width: 260px;
+  }
+
+  .fincoach-logo-xl {
+    width: 330px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fincoach-logo-small {
+    width: 125px;
+  }
+
+  .fincoach-logo-medium {
+    width: 180px;
+  }
+
+  .fincoach-logo-large {
+    width: 220px;
+  }
+
+  .fincoach-logo-xl {
+    width: 280px;
+  }
+
+  .fincoach-logo-tagline {
+    font-size: 11px;
+  }
+}

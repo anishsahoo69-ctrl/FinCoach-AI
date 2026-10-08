@@ -1,0 +1,404 @@
+/* =========================================
+   FINCOACH AI - BUDGET STATUS
+   ========================================= */
+
+.budget-status-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.budget-status-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.budget-status-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.budget-status-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #6663e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-status-label {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.budget-status-subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* =========================================
+   HEADER META
+   ========================================= */
+
+.budget-status-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.budget-last-updated {
+  font-size: 12px;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+.budget-refresh-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22c55e;
+}
+
+/* =========================================
+   PROGRESS SECTION
+   ========================================= */
+
+.budget-progress-section {
+  margin-top: 10px;
+}
+
+.budget-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.budget-progress-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.budget-percentage {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* =========================================
+   PROGRESS BAR
+   ========================================= */
+
+.budget-progress-track {
+  width: 100%;
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+/* Success */
+.budget-progress-fill.success {
+  background: #22c55e;
+}
+
+/* Warning */
+.budget-progress-fill.warning {
+  background: #f59e0b;
+}
+
+/* Danger */
+.budget-progress-fill.danger {
+  background: #ef4444;
+}
+
+/* =========================================
+   PROGRESS FOOTER
+   ========================================= */
+
+.budget-progress-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.budget-spent-text {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.budget-limit-text {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* =========================================
+   STATUS MESSAGE
+   ========================================= */
+
+.budget-status-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 13px 15px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Success */
+.budget-status-message.success {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* Warning */
+.budget-status-message.warning {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+/* Danger */
+.budget-status-message.danger {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+/* =========================================
+   SPENDING INFORMATION
+   ========================================= */
+
+.budget-spending-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.budget-spending-box {
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.budget-spending-label {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.budget-spending-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Remaining amount */
+.budget-spending-value.remaining {
+  color: #16a34a;
+}
+
+/* Over budget */
+.budget-spending-value.over-budget {
+  color: #dc2626;
+}
+
+/* =========================================
+   NO BUDGET STATE
+   ========================================= */
+
+.no-budget-content {
+  text-align: center;
+  padding: 20px 10px 10px;
+}
+
+.no-budget-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 18px;
+  background: #eef2ff;
+  color: #6663e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-budget-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.no-budget-text {
+  max-width: 420px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.budget-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.budget-tip svg {
+  flex-shrink: 0;
+  color: #6663e6;
+  margin-top: 2px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+   ========================================= */
+
+@media (max-width: 700px) {
+  .budget-status-card {
+    padding: 20px;
+  }
+
+  .budget-status-header {
+    align-items: flex-start;
+  }
+
+  .budget-status-meta {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  .budget-last-updated {
+    font-size: 11px;
+  }
+
+  .budget-percentage {
+    font-size: 20px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+  .budget-status-card {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .budget-status-header {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .budget-status-meta {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .budget-status-label {
+    font-size: 16px;
+  }
+
+  .budget-status-subtitle {
+    font-size: 12px;
+  }
+
+  .budget-status-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .budget-progress-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .budget-spending-info {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-status-message {
+    font-size: 12px;
+  }
+
+  .no-budget-title {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 360px) {
+  .budget-status-card {
+    padding: 14px;
+  }
+
+  .budget-status-header-left {
+    gap: 9px;
+  }
+
+  .budget-status-label {
+    font-size: 15px;
+  }
+
+  .budget-percentage {
+    font-size: 18px;
+  }
+
+  .budget-spending-box {
+    padding: 13px;
+  }
+
+  .budget-spending-value {
+    font-size: 16px;
+  }
+}
